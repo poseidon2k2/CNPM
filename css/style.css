@@ -469,15 +469,17 @@ button:hover {
 .usermenu li:first-child {
   margin-left: 0;
 }
-.usermenu li a {
+.usermenu li button {
   float: left;
   padding-left: 22px;
+  padding-top: 0px;
   color: #fff;
+  border: none;
 }
-.usermenu li a.log {
+.usermenu li button.log {
   background: url(../images/loginbg.png) left top no-repeat;
 }
-.usermenu li a.reg {
+.usermenu li button.reg {
   background: url(../images/regbg.png) left top no-repeat;
 } /* NAV style */
 .navbar-collapse {
@@ -2881,4 +2883,61 @@ option {
   .grandtotal span {
     margin-bottom: 20px;
   }
+}
+
+
+.res-form{
+  background: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -10000px;
+  z-index: 1500;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+
+}
+
+.login-form{
+  background: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -10000px;
+  z-index: 1500;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;  
+}
+
+.res-form form h1{
+  margin-bottom: 5px;
+}
+
+.wrapper-form-items{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.wrapper-form-items label{
+  margin-right: 10px;
+}
+
+.clearfix button{
+  margin: 10px 5px;
+}
+
+.left0{
+  left: 0px !important;
+}
+
+.right0{
+  right: 0px !important;
 }

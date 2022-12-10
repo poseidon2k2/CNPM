@@ -556,7 +556,34 @@
           });
         });
         </script>
-        
+        <script type="text/javascript">
+         function loginCheck(){
+            var usernameLog = document.getElementById("usernameLogin").value;
+            var passLog = document.getElementById("passwordLogin").value;
+            
+            fetch("https://sheetdb.io/api/v1/4668syaknw0j7")
+         .then(response => response.json())
+         .then(data =>{
+            for(i=0; i<data.length; i=i+1){
+               if (usernameLog == data[i].username) {
+                  if (passLog == data[i].password) {
+                     alert("Login Success");
+                     return;
+                  }else{
+                     alert("Login Failed");
+                     return;
+                  }
+               }else{
+                  alert("Login Failed");
+                  return;
+               }
+               
+            }
+
+           })
+
+         };
+        </script>
         <script type="text/javascript">
          function displayRes(){
             var resForm = document.getElementById("res-form");
